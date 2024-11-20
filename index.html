@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinentlahla Pindani Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <img src="SLogo.png" id="logo" alt="logo">
+    <nav class ="navbar">
+  
+       
+        <a href="#" class ="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Project</a>
+        
+ 
+    </nav>
+    <a href="#contact" class ="contact">Contact</a>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+        <h3>Hi</h3>
+        <h1>I'm <span>Sinentlahla<br></span> a Software Developer</h1>
+        
+        <div class="btn-box">
+          <a href="resume.pdf" class="btn" target="_blank">Hire Me</a>
+      </div>
+      
+    </div>
+    <div class="img-box">
+        <img src="sine.jpg" alt="">
+    </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class ="about-img">
+        <img src = "sine.jpg" alt="">
+        </div>
+<div class="about-content">
+    <h2 class="heading">About <span>Me</span></h2>
+    <h3>Software <span>Developer</span></h3>
+    <p>Greetings! I am Sinentlahla Pindani, a dynamic and driven individual currently residing in Cape Town, originally hailing from the Eastern Cape. At 25 years old, I bring a wealth of enthusiasm and a passion for Information Technology to the table.
+
+        In 2019, I successfully completed a Higher Certificate in Information Communication Technology, marking the beginning of my journey into the world of technology. Presently, I am on the brink of completing my final year in IT with a specialization in Applications Development, a testament to my commitment to continuous learning and skill enhancement.
+        
+        As a self-motivated and quick learner, I thrive in environments that demand adaptability and problem-solving. My ability to actively listen and comprehend information allows me to respond effectively and contribute meaningfully to collaborative endeavors.
+        
+        My proficiency extends to a range of computer applications, including the Microsoft Office suite encompassing Word, Excel, and PowerPoint. Moreover, I have cultivated programming skills in HTML, CSS, JavaScript, Java, React, Python, and MySQL database management. These competencies empower me to design and develop innovative solutions that bridge the gap between user needs and technological capabilities.
+        
+        I am excited about the prospect of leveraging my skills and knowledge to make a positive impact in the field of IT. Join me on this journey as I continue to explore, learn, and contribute to the ever-evolving landscape of technology.</p>
+     </div>
+
+    </section>
+
+  
+    
+
+    <section class="contact-section" id="contact">
+
+        <div class="contact-content">
+          <h2 class="heading">Contact <span>Me</span></h2>
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+              <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <script>
+        
+        document.querySelector('.contact-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            // Create a JavaScript object with the form data
+            const formData = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                // Send the data to the server
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                // Handle the server response
+                const result = await response.json();
+                alert(result.message);
+            } catch (error) {
+                alert('Error: Could not submit the form.');
+            }
+        });
+    </script>
+
+      <section class="skills-section" id="skills">
+        <div class="skills-content">
+          <!-- Main Heading -->
+          <h1 class="heading">My <span>Skills</span></h1>
+          
+          <!-- Row Container for Skills Sections -->
+          <div class="skills-row">
+            
+            <!-- Technical Skills Section -->
+            <div class="skills-block">
+              <h1 class="technical-heading">Front-End  <span>Skills</span></h1>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="85"></div>
+                <div class="infor">HTML & CSS</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="70"></div>
+                <div class="infor">CSS</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="65"></div>
+                <div class="infor">JavaScript</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="65"></div>
+                <div class="infor">React</div>
+              </div>
+            </div>
+      
+            <!-- Professional Skills Section -->
+            <div class="skills-block">
+              <h1 class="technical-heading">Back-End <span>Skills</span></h1>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="70"></div>
+                <div class="infor">Node js</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="70"></div>
+                <div class="infor">Java</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="65"></div>
+                <div class="infor">Python</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="65"></div>
+                <div class="infor">Express and Mongo DB/ MySQL</div>
+              </div>
+            </div>
+
+
+
+
+            <div class="skills-block">
+              <h1 class="technical-heading">Professional <span>Skills</span></h1>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="70"></div>
+                <div class="infor">Communication</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="65"></div>
+                <div class="infor">Problem Solving</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="80"></div>
+                <div class="infor">Team Work</div>
+              </div>
+            </div>
+      
+            <!-- Computer Skills Section -->
+            <div class="skills-block">
+              <h1 class="technical-heading">Computer <span>Skills</span></h1>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="95"></div>
+                <div class="infor">Microsoft Word</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="85"></div>
+                <div class="infor">Microsoft Excel</div>
+              </div>
+              <div class="tech-bars">
+                <div class="ui-widgets" data-percent="90"></div>
+                <div class="infor">PowerPoint</div>
+              </div>
+            </div>
+      
+          </div> <!-- End of skills-row -->
+      
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+<section class="projects-section" id="projects">
+        <div class="projects-content">
+          <h2 class="heading">My <span>Projects</span></h2>
+          
+          <div class="projects-list">
+              <!-- Project 1 -->
+              <div class="project-card">
+                  <img src="image1.png" alt="Library Management System" class="project-image">
+                  <h3>Single Page Application</h3>
+                  <p>This is a Library Management System built using React. It is a Single Page Application (SPA) that allows users to interact with the library system by viewing a home page, learning about the library's mission on the about page, and managing their personal information and borrowed books on the user profile page.</p>
+                  <div class="project-links">
+                      <a href="https://github.com/Sinentlahla219081328/React-App.git" target="_blank" class="btn">View Source Code</a>
+                  </div>
+              </div>
+              
+              <!-- Project 2 -->
+              <div class="project-card">
+                  <img src="image2.png" alt="Project 2" class="project-image">
+                  <h3>Simple Rest API</h3>
+                  <p>This project is a simple REST API built with Node.js using the core modules http, fs, and path. It performs CRUD (Create, Read, Update, Delete) operations on a list of items stored in a JSON file (items.json).</p>
+                  <div class="project-links">
+                      <a href="https://github.com/Sinentlahla219081328/Server-App.git" target="_blank" class="btn">View Source Code</a>
+                  </div>
+              </div>
+  
+              <!-- Project 3 -->
+              <div class="project-card">
+                  <img src="image3.jpg" alt="Project 3" class="project-image">
+                  <h3>Data Analysis for Libraries</h3>
+                  <p>Demographic and asset information of public libraries Update Frequency: Annual</p>
+                  <div class="project-links">
+                      <a href="https://github.com/Sinentlahla219081328/Libraries.git" target="_blank" class="btn">View Source Code</a>
+                  </div>
+              </div>
+  
+              <!-- Project 4 -->
+              <div class="project-card">
+                  <img src="image4.PNG" alt="Project 4" class="project-image">
+                  <h3>Single java application</h3>
+                  <p>The Library Management System is a console-based application that enables users to manage a library. This includes options to borrow and return books, manage library members, and maintain the book inventory. The system provides a straightforward interface for librarians and members to interact with the library's resources efficiently.</p>
+                  <div class="project-links">
+                      <a href="https://github.com/Sinentlahla219081328/LibraryManagementSystem.git" target="_blank" class="btn">View Source Code</a>
+                  </div>
+              </div>
+  
+              <div class="project-card">
+                <img src="image5.png" alt="Project 4" class="project-image">
+                <h3>FullStack Application </h3>
+                <p>This is an e-commerce website for a bookstore that allows users to register, login, browse products, add them to a shopping cart, and complete secure checkout. It also includes order management and tracks order history for users</p>
+                <div class="project-links">
+                    <a href="https://github.com/Sinentlahla219081328/Fullstack-application.git" target="_blank" class="btn">View Source Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+              <img src="image6.PNG" alt="Project 4" class="project-image">
+              <h3>CSE Website Using React </h3>
+              <p></p>
+              <div class="project-links">
+                  <a href="https://github.com/Sinentlahla219081328/Cape-Sunny-Energy.git" target="_blank" class="btn">View Source Code</a>
+              </div>
+          </div>
+
+          
+          </div>
+      </div>
+
+      </section>
+
+
+
+
+</body>
+
+<footer>
+  <div class="footer-content">
+    <!-- Social Media Links -->
+    <a href="https://www.linkedin.com/feed/?trk=public_profile_not-found-log-in_google-one-tap-submit" target="_blank">
+      <i class='bx bxl-linkedin-square'></i>
+    </a>
+    <a href="https://www.facebook.com/profile" target="_blank">
+      <i class='bx bxl-facebook-circle'></i>
+    </a>
+    
+    <!-- Contact Details -->
+    <div class="contact-info">
+      <p><strong>Email:</strong>  sinentlahlapindani@gmail.com  / sinentlahla.pindani@capaciti.org.za</p><br>
+      <p><strong>Phone:</strong>   073 522 8010</p>
+    </div>
+  </div>
+</footer>
+
+</html>

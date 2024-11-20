@@ -1,0 +1,485 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  /* Header Style */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 12%; /* Reduced padding to 20px */
+    background: rgba(0, 0, 0, 0.8); /* Transparent background */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    height: 80px; /* Set a fixed height for the header */
+  }
+  
+  /* Logo Style */
+  #logo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    background: rgba(0, 0, 0, 0.8); /* Same transparent background as header */
+    padding: 10px;
+    border-radius: 50%; /* Optional: make the logo circular */
+  }
+  
+  /* Navbar Links */
+  .navbar a {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: orange; /* Highlight active or hovered link */
+  }
+  
+  /* Contact Button */
+  .contact {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact:hover {
+    background-color:#ff8b3d;
+  }
+  
+  /* Home Section */
+  .home {
+    min-height: 100vh;
+    padding-top: 100px; /* Add padding to account for the fixed header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12%;
+    background: #313131; /* Dark background for the home section */
+    color: #fff;
+  }
+  
+  .home-content h3 {
+    font-size: 36px;
+  }
+  
+  .home-content h1 {
+    font-size: 48px;
+  }
+  
+  .home-content span {
+    color: #ff8b3d;
+  }
+  
+  /*.btn-box {
+    margin-top: 20px;
+  }
+  
+  .btn-box .btn-1,
+  .btn-box .btn-2 {
+    padding: 10px 20px;
+    background-color:#ff8b3d;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  /* Hover Effect */
+/*.btn-box .btn-1:hover,
+.btn-box .btn-2:hover {
+  background-color: #e6751b; /* Darker orange on hover */
+/*}*/
+.btn-box {
+  text-align: center; /* Centers the button horizontally */
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff8b3d; /* Green background color */
+  color: white; /* White text */
+  padding: 12px 24px; /* Top/Bottom and Left/Right padding */
+  text-align: center; /* Centers text inside the button */
+  text-decoration: none; /* Removes underline from link */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+.btn:hover {
+  background-color: #e6751b; /* Darker green on hover */
+}
+  
+  .img-box img {
+    width: 500px; /* Adjust size of your image */
+    border-radius: 50%; /* Optional: make the image circular */
+    height: 450px;
+  }
+  
+ ::-webkit-scrollbar{
+    width: 15px;
+ }
+
+ ::-webkit-scrollbar-thumb{
+    background-color: rgb(247, 243, 242);
+ }
+
+ ::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50px;
+ }
+
+
+ /* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 12%; /* Padding to make space for fixed header */
+    background: #313131; /* Dark background matching the home section */
+    color: #fff;
+  }
+  
+  /* About Image */
+  .about-img {
+    flex: 1; /* Make the image take 1 part of the available space */
+  }
+  
+  .about-img img {
+    width: 400px; /* Adjust the image width */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px; /* Slight rounding of corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to image */
+  }
+  
+  /* About Content */
+  .about-content {
+    flex: 2; /* Make the text take 2 parts of the available space */
+    margin-left: 50px; /* Add space between the image and text */
+  }
+  
+  .about-content .heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content h2 span, .about-content h3 span {
+    color: #ff8b3d; /* Styling the span with orange color */
+  }
+  
+  .about-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Ensure responsive behavior */
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column; /* Stack image and text on smaller screens */
+      text-align: center;
+    }
+  
+    .about-img {
+      margin-bottom: 30px; /* Add space below image on mobile */
+    }
+  
+    .about-content {
+      margin-left: 0;
+    }
+  }
+
+
+  /* Contact Section */
+.contact-section {
+    padding: 100px 12%;
+    background-color: #313131; /* Dark background */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact-content .heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-content .heading span {
+    color: #ff8b3d; /* Orange highlight */
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #706e6e;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    margin: 5px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #dadada;
+  }
+  
+  .btn-submit {
+    padding: 12px 20px;
+    background-color: #ff8b3d; /* Orange button */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #e6751b; /* Darker orange on hover */
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .form-group {
+      flex-direction: column;
+    }
+  
+    .form-group input {
+      margin: 5px 0;
+    }
+  }
+
+ 
+  /* Skills Section */
+.skills-section {
+  padding: 50px 12%;
+  background: #313131;
+}
+
+.skills-content {
+  text-align: center;
+}
+
+/* Main Heading Styling */
+.heading {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.heading span {
+  color: #ff8b3d;
+}
+
+/* Flexbox container for skills sections */
+.skills-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Skills Block (Individual skill type column) */
+.skills-block {
+  width: 30%;
+  text-align: center;
+}
+
+/* Skills Headings */
+.technical-heading {
+  font-size: 24px;
+  color: #ff8b3d;
+  margin-bottom: 20px;
+  text-decoration: underline; /* Underline for all section titles */
+}
+
+/* Circular Progress Bar Styles */
+.ui-widgets {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 10px solid rgba(255, 139, 61, 0.6); /* Adjust the border color */
+  margin: 0 auto;
+}
+
+.ui-widgets[data-percent="85"]::before,
+.ui-widgets[data-percent="70"]::before,
+.ui-widgets[data-percent="65"]::before,
+.ui-widgets[data-percent="90"]::before,
+.ui-widgets[data-percent="80"]::before,
+.ui-widgets[data-percent="95"]::before {
+  content: attr(data-percent) '%';
+  font-size: 20px;
+  color: #313131;
+  text-align: center;
+  line-height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.infor {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Flexbox container inside each skill block */
+.tech-bars {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+footer {
+  background-color: #333; /* Dark background for footer */
+  color: #fff; /* White text color */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Adds spacing between items */
+}
+
+.footer-content a {
+  color: #fff; /* White icons */
+  font-size: 24px; /* Adjust size of social media icons */
+  margin: 0 10px; /* Adds spacing between icons */
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #e6751b; /* Hover effect for social media links */
+}
+
+.contact-info {
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #e6751b; /* Hover effect for email links */
+}
+
+
+
+
+/* Style for Projects Section */
+.projects-section {
+  padding: 60px 20px;
+  background-color: #313131;
+  text-align: center;
+}
+
+.projects-content .heading {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-links .btn {
+  background-color: #ff8b3d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-links .btn:hover {
+  background-color: #e6751b;
+}
+
+
+
+
+    
+
