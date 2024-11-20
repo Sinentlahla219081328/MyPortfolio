@@ -26,11 +26,11 @@
   
   /* Logo Style */
   #logo {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 130px; 
+    height: 210%; 
     background: rgba(0, 0, 0, 0.8); /* Same transparent background as header */
     padding: 10px;
-    border-radius: 50%; /* Optional: make the logo circular */
+    border-radius: 50%; 
   }
   
   /* Navbar Links */
