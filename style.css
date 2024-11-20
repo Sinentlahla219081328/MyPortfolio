@@ -27,7 +27,7 @@
   /* Logo Style */
   #logo {
     width: 130px; 
-    height: 210%; 
+    height: 210%; /* Maintain aspect ratio */
     background: rgba(0, 0, 0, 0.8); /* Same transparent background as header */
     padding: 10px;
     border-radius: 50%; 
