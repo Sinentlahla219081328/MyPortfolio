@@ -61,150 +61,107 @@
     </section>
 
   
-    
 
-    <section class="contact-section" id="contact">
-
-        <div class="contact-content">
-          <h2 class="heading">Contact <span>Me</span></h2>
-          <form class="contact-form" action="#" method="POST">
-            <div class="form-group">
-              <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-              <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Submit</button>
-          </form>
-        </div>
-      </section>
-      <script>
+    <section class="skills-section" id="skills">
+      <div class="skills-content">
+        <!-- Main Heading -->
+        <h1 class="heading">My <span>Skills</span></h1>
         
-        document.querySelector('.contact-form').addEventListener('submit', async function (event) {
-            event.preventDefault();
-
-            // Create a JavaScript object with the form data
-            const formData = {
-                firstName: document.getElementById('first-name').value,
-                lastName: document.getElementById('last-name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            try {
-                // Send the data to the server
-                const response = await fetch('/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                });
-
-                // Handle the server response
-                const result = await response.json();
-                alert(result.message);
-            } catch (error) {
-                alert('Error: Could not submit the form.');
-            }
-        });
-    </script>
-
-      <section class="skills-section" id="skills">
-        <div class="skills-content">
-          <!-- Main Heading -->
-          <h1 class="heading">My <span>Skills</span></h1>
+        <!-- Row Container for Skills Sections -->
+        <div class="Container">
           
-          <!-- Row Container for Skills Sections -->
-          <div class="skills-row">
-            
-            <!-- Technical Skills Section -->
-            <div class="skills-block">
-              <h1 class="technical-heading">Front-End  <span>Skills</span></h1>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="85"></div>
-                <div class="infor">HTML & CSS</div>
+          <!-- Technical Skills Section -->
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="img">
+                <img src ="html-5.png" class="skill-icon">
               </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="70"></div>
-                <div class="infor">CSS</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="65"></div>
-                <div class="infor">JavaScript</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="65"></div>
-                <div class="infor">React</div>
+               <h3>HTML</h3>
+            </div>
+          </div>
+  
+  
+          <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="css.png" class="skill-icon">
+                </div>
+                 <h3>CSS</h3>
               </div>
             </div>
-      
-            <!-- Professional Skills Section -->
-            <div class="skills-block">
-              <h1 class="technical-heading">Back-End <span>Skills</span></h1>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="70"></div>
-                <div class="infor">Node js</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="70"></div>
-                <div class="infor">Java</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="65"></div>
-                <div class="infor">Python</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="65"></div>
-                <div class="infor">Express and Mongo DB/ MySQL</div>
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="java-script.png" class="skill-icon">
+                </div>
+                 <h3>JavaScript</h3>
               </div>
             </div>
-
-
-
-
-            <div class="skills-block">
-              <h1 class="technical-heading">Professional <span>Skills</span></h1>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="70"></div>
-                <div class="infor">Communication</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="65"></div>
-                <div class="infor">Problem Solving</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="80"></div>
-                <div class="infor">Team Work</div>
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="react.png" class="skill-icon">
+                </div>
+                 <h3>React</h3>
               </div>
             </div>
-      
-            <!-- Computer Skills Section -->
-            <div class="skills-block">
-              <h1 class="technical-heading">Computer <span>Skills</span></h1>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="95"></div>
-                <div class="infor">Microsoft Word</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="85"></div>
-                <div class="infor">Microsoft Excel</div>
-              </div>
-              <div class="tech-bars">
-                <div class="ui-widgets" data-percent="90"></div>
-                <div class="infor">PowerPoint</div>
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="java.png" class="skill-icon">
+                </div>
+                 <h3>Java</h3>
               </div>
             </div>
-      
-          </div> <!-- End of skills-row -->
-      
-        </div>
-      </section>
-
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="python.png" class="skill-icon">
+                </div>
+                 <h3>Python</h3>
+              </div>
+            </div>
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="node-js.png" class="skill-icon">
+                </div>
+                 <h3>Node JS</h3>
+              </div>
+            </div>
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="database.png" class="skill-icon">
+                </div>
+                 <h3>SQL and MongoDB</h3>
+              </div>
+            </div>
+  
+            <div class="skill-box">
+              <div class="skill-title">
+                <div class="img">
+                  <img src ="figma.png" class="skill-icon">
+                </div>
+                 <h3>Figma</h3>
+              </div>
+            </div>
+    
+        </div> <!-- End of skills-row -->
+    
+      </div>
+    </section>
+  
+  
+  
+  
+  
 
 
 
@@ -281,6 +238,61 @@
       </div>
 
       </section>
+
+
+      
+    
+
+    <section class="contact-section" id="contact">
+
+      <div class="contact-content">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <script>
+      
+      document.querySelector('.contact-form').addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          // Create a JavaScript object with the form data
+          const formData = {
+              firstName: document.getElementById('first-name').value,
+              lastName: document.getElementById('last-name').value,
+              email: document.getElementById('email').value,
+              message: document.getElementById('message').value
+          };
+
+          try {
+              // Send the data to the server
+              const response = await fetch('/submit', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(formData),
+              });
+
+              // Handle the server response
+              const result = await response.json();
+              alert(result.message);
+          } catch (error) {
+              alert('Error: Could not submit the form.');
+          }
+      });
+  </script>
 
 
 
