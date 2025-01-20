@@ -103,7 +103,7 @@
   background-color: #e6751b; /* Darker orange on hover */
 /*}*/
 .btn-box {
-  text-align: center; /* Centers the button horizontally */
+  text-align: left; /* Centers the button horizontally */
   margin-top: 20px; /* Adds some space above the button */
 }
 
