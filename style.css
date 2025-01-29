@@ -468,6 +468,11 @@ footer {
   text-align: left;
   width: 100%;
   max-width: 350px;
+
+  position: relative;
+  overflow: hidden;
+
+  padding-bottom: 50px;
 }
 
 .project-card:hover {
@@ -475,11 +480,39 @@ footer {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+.project-card:hover .project-links {
+  display: block; /* Display buttons on hover */
+}
+
+/* Hide the buttons by default */
+.project-links {
+  display: none; /* Hide the buttons initially */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+
+  z-index: 1; 
+}
+
+.project-card:hover p {
+  display: block; /* Show paragraph on hover */
+}
+
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Optional zoom effect on hover */
+}
 .project-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
+ /* width: 100%;*/
+  /*height: auto;*/
+ /* border-radius: 8px;
+  margin-bottom: 20px;*/
+  width: 100%; /* Makes the image stretch to fill the container */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  transition: transform 0.3s ease; /* Optional transition effect */
 }
 
 .project-card h3 {
@@ -491,6 +524,10 @@ footer {
   font-size: 1em;
   color: #555;
   margin-bottom: 15px;
+  display: none; /* Hide paragraph by default */
+  transition: opacity 0.3s ease; /* Add smooth transition */
+
+  padding-bottom: 40px;
 }
 
 .project-links .btn {
